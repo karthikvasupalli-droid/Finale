@@ -3,78 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My College - V01</title>
+  <title>My College - V03</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; }
     header {
-      background: #2c3e50;
+      background: url('https://picsum.photos/1600/600?college') center/cover no-repeat;
       color: white;
-      padding: 15px;
       text-align: center;
+      padding: 100px 20px;
     }
+    header h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p { margin-top: 10px; font-size: 1.2rem; }
     nav {
-      background: #34495e;
-      padding: 10px;
+      position: sticky;
+      top: 0;
+      background: #0d6efd;
+      padding: 12px;
       text-align: center;
     }
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
+      color: white; margin: 0 20px; text-decoration: none; font-weight: bold;
     }
-    nav a:hover {
-      color: #f39c12;
+    nav a:hover { color: #ffc107; }
+    section { padding: 50px 20px; text-align: center; }
+    .testimonials {
+      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
     }
-    section {
-      padding: 20px;
-      text-align: center;
+    .card {
+      background: white; padding: 20px; border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 250px;
     }
+    button {
+      background: #0d6efd; color: white; padding: 12px 20px;
+      border: none; border-radius: 25px; cursor: pointer; font-size: 1rem;
+      transition: 0.3s ease-in-out;
+    }
+    button:hover { background: #0b5ed7; transform: scale(1.05); }
     footer {
-      background: #2c3e50;
-      color: white;
-      padding: 10px;
-      text-align: center;
+      background: #0d6efd; color: white; padding: 20px; text-align: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My College</h1>
-    <p>Excellence in Education Since 1990</p>
-  </header>
-  
   <nav>
-    <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
-  
-  <section id="home">
-    <h2>Home</h2>
-    <p>This is the official website of My College.</p>
-  </section>
-  
+
+  <header>
+    <h1>Welcome to My College</h1>
+    <p>Where Innovation Meets Education</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Join Us Today
+    </button>
+  </header>
+
   <section id="about">
     <h2>About Us</h2>
-    <p>My College is one of the leading institutions providing quality education in science, technology, and arts.</p>
+    <p>My College has been producing leaders in science, arts, and technology for over 30 years.</p>
   </section>
-  
+
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <p>We offer world-class degrees in Engineering, Business, and Arts.</p>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Students Say</h2>
+    <div class="testimonials">
+      <div class="card">
+        <p>"The faculty here changed my life!"</p>
+        <h4>- Priya, B.Tech</h4>
+      </div>
+      <div class="card">
+        <p>"I built lifelong friendships and skills."</p>
+        <h4>- Arjun, MBA</h4>
+      </div>
+      <div class="card">
+        <p>"Best experience ever, highly recommend."</p>
+        <h4>- Meera, BA English</h4>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: info@mycollege.com | Phone: +91 98765 43210</p>
   </section>
-  
+
   <footer>
-    <p>&copy; 2025 My College. All Rights Reserved.</p>
+    <p>&copy; 2025 My College | All Rights Reserved</p>
   </footer>
-  
+
   <script>
-    console.log("College Website V01 Loaded Successfully!");
+    console.log("College Website V03 Loaded Successfully!");
   </script>
 </body>
 </html>
